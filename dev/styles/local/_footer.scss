@@ -1,0 +1,75 @@
+.site-footer {
+  background: $blackAlt;
+  border-top: 2em solid $primary;
+  height: 377px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: 601px) {
+    height: auto;
+    padding: 2em 0;
+  }
+  h5 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 3em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  ul.Submenu {
+    li {
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: $primary;
+      }
+      a {
+        letter-spacing: 1px;
+        font-size: 1.1em;
+        padding-left: 0.5em;
+        color: #fff;
+        @include trans(300ms);
+        &:hover {
+          color: lighten($primary, 25);
+          padding-left: 0.8em;
+          @include trans(300ms);
+        }
+        &:active {
+          color: $primary;
+          @include trans(300ms);
+        }
+      }
+    }
+  }
+  ul.social {
+    li {
+      p {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: $primary;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        i {
+          font-size: 27px;
+          color: #fff;
+          &:hover {
+            color: lighten($primary, 25);
+            @include trans(300ms);
+          }
+          &:active {
+            color: $primary;
+            @include trans(300ms);
+          }
+        }
+      }
+    }
+  }
+}
