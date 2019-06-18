@@ -1,66 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600&display=swap');
 
 //Color
 
-$primary:#146CBE;
-$primaryAlt: #063E73;
-$secundary:#CA332A;
-$secundaryAlt:#1A2E40;
-$black:#000;
-$blackAlt:#212121;
-$white:#F7F7F7;
-$gris:#6C6D6B;
-
-//Dradients
-$dread:linear-gradient(#414345 0%, #232526 100%);
-
-$d1:linear-gradient(#6dd5ed 0%, #007991 100%);
-$d2:linear-gradient(#586dcd 0%, #58357b 100%);
-$d3:linear-gradient(#485563 0%, #29323c 100%);
-$d4:linear-gradient(#41295a 0%, #2f0743 100%);
-$d5:linear-gradient(#9d50bb 0%, #6e48aa 100%);
-$d6:linear-gradient(#146cbe 0%, #063e73 100%);
-
-
-//Color aux Shaddow
-$cardshadow-1: #007991;
-$cardshadow-2: #58357b;
-$cardshadow-3: #485563;
-$cardshadow-4: #41295a;
-$cardshadow-5: #6e48aa;
-$cardshadow-6: #146cbe;
+$primary:#0768b1;
+$secundary:#00B2C2;
+$black:#06090a;
+$blackAlt:#373737;
+$white:#FCFCFC;
+$whiteAlt:#FEFFEE;
 
 //Animate
+
 @mixin trans($time) {
-  transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-@mixin transAux($time) {
   transition: all $time cubic-bezier(1, -0.37, 0.92, 1.33);
 }
 //Hover
 @mixin hover_ui($time, $bcolor, $fcolor) {
   transition-property: all;
-  transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-duration: $time;
   background: $bcolor;
   color: $fcolor;
-}
-
-//BTN
-.btn_primary{
-  @include hover_ui(350ms, $primary , $white );
-  text-decoration: none;
-  padding: .9em 2em;
-  box-shadow: 5px 5px #000;
-  font-weight: 700;
-  letter-spacing: 1pt;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: capitalize;
-  &:hover{
-    box-shadow: 0px 0px #000;
-  }
-  &:active{
-    @include hover_ui(350ms, darken($primary , 15) , $white );
-    box-shadow: 0px 0px #000;
-  }
 }
